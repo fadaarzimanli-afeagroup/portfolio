@@ -1,0 +1,86 @@
+.experience-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-entry {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  padding-block: var(--space-8);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.experience-entry:last-child {
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+@media (min-width: 640px) {
+  .experience-entry {
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-10);
+    align-items: start;
+  }
+}
+
+.experience-entry__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+@media (max-width: 639px) {
+  .experience-entry__meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2);
+    column-gap: var(--space-3);
+  }
+
+  .experience-entry__period {
+    width: 100%;
+  }
+}
+
+.experience-entry__period {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+.experience-entry__company {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.experience-entry__role {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.experience-entry__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.experience-entry__desc {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+}
+
+@media (min-width: 640px) {
+  .experience-entry__desc {
+    font-size: var(--text-base);
+  }
+}
+
+.experience-entry__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
